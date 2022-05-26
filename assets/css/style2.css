@@ -1,0 +1,73 @@
+.dr-row {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: middle;
+    background-color: lightgrey;
+    padding: 20px 20px 0 20px;
+}
+
+.dr-row:last-child {
+    padding: 20px;
+}
+
+.centerline {
+    position: absolute;
+    width: 3px;
+    background-color: black;
+    right: 50%;
+    height: 100%;
+    bottom: 50%;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.left, .right, .empty {
+    padding:30px;
+    border-radius: 20px;
+    min-width: 100px;
+}
+
+.left {
+    background-color: cyan;
+    margin-right: 30px;
+}
+
+.right {
+    background-color: yellow;
+    margin-left: 30px;
+}
+
+.box {
+    position:relative;
+    margin: auto 0;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.left::before {
+    position:absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    top:50%;
+    right: 0;
+}
+
+.right::before {
+    position:absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    top:50%;
+    left: 0;
+}
+
+.empty {
+    margin-left:30px;
+}
+
+

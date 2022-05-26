@@ -1,0 +1,59 @@
+.collection {
+    position: relative;
+    display: flex;
+    background-color: cyan;
+    padding: 30px;
+    /* max-width: 550px; */
+    padding:0;
+    justify-content: center;
+}
+
+
+.centerline {
+    position: relative;
+    width: 3px;
+    background-color: blue;
+    right: 50%;
+    /* height: 100%; */
+    /* bottom: 50%; */
+    bottom: 0;
+    overflow: hidden;
+}
+
+.box {
+    background-color: #c5c5c5;
+    width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    margin: 30px;
+    text-align: center;
+}
+
+/* place right for box on the left */
+.box:nth-child(2n+1):before {
+    right:100%
+}
+
+/* place left for box on the right */
+.box:nth-child(2n):before {
+    left:100%
+}
+
+/* base line */
+.box:before {
+    top: 50%;
+    height: 3px;
+    width: 30px;
+    background-color:blue;
+    content: '';
+    position:absolute;
+}
+
+.position {
+    background-color: blue;
+    color: #fff;
+    width: 200px;
+    position: relative;
+
+}
